@@ -60,7 +60,7 @@ hi URL:hover            				text-decoration: underline; cursor: pointer;
 hi WarningMsg           				color: #CC9393; background: #242421;
 
 hi -a StatusLine            			color: #e0e0e0; font-weight: normal; font-family: Arial,Verdana,Ubuntu,Georgia; text-shadow: none; font-size: 10px; 
-hi -a StatusLine            			padding-top: 0px !important; padding-bottom: 0px !important;
+hi -a StatusLine            			padding-top: 0px !important; padding-bottom: 0px !important; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 
 hi -a StatusCmdLine	        			color: #f4f4f4; font-size: 11px; font-family: Ubuntu,Verdana,Arial;
 hi -l Normal Indicator width:4px;color:#94BFF3;
