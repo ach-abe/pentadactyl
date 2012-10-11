@@ -89,6 +89,7 @@ let buftabs = {
                     tabs.select(this.tabpos);
                 else if (ev.button == 1)
                     tabs.remove(tabs.getTab(this.tabpos), 1, false, 0);
+
             }, false);
         }
 
@@ -145,6 +146,11 @@ let buftabs = {
             tabvalue = "Loading...";
         } else {
             tabvalue = browser.contentTitle || "Untitled";
+			
+			if(browser.currentURI.prePath.substr(0, 5) == "https")
+				label.style.color = "#AAFFCB";
+			else
+				label.style.color = "#ffffff";
         }
 
         // Check length
@@ -165,14 +171,12 @@ let buftabs = {
             label.style.background='url("'+favicon+'") no-repeat left top';
             label.style.MozBackgroundSize='16px 16px';
         }
-
+		
         // Set the correct highlight group
         if (tabs.index(null, true) == label.tabpos)
             label.setAttributeNS(NS.uri, "highlight", "BufTabSelected");
         else
             label.setAttributeNS(NS.uri, "highlight", "BufTab");
-
-
     },
 
     // Create the horizontal box for adding the tabs to
