@@ -3,8 +3,6 @@ colorscheme myzenburn
 loadplugins '\.(js|penta)$'
 group user
 
-set buftabs-completer=~
-set buftabs-maxlength=15
 set guioptions=mCs
 set showtabline=never
 set sf=*:laissez-faire
